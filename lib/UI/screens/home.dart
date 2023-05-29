@@ -26,8 +26,9 @@ class _PokemonHomePageState extends State<PokemonHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: PokedexTheme.theme,
-      title: 'Pokedex',
+      title: 'Pokemon',
       home: FutureBuilder(
         future: dependencies,
         builder: (context, snapshot) {

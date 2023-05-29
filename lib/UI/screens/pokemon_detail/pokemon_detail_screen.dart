@@ -47,7 +47,7 @@ class _PokemonDetailScreenState extends State<PokemonDetailScreen> {
                       backgroundColor: Colors.transparent,
                       elevation: 0,
                       pinned: true,
-                      // title: Text(pokemon.name!.capitalize()),
+                      title: Text(pokemon.name!.capitalize()),
                     ),
                     _buildImage(pokemon),
                     _buildContent(pokemon),

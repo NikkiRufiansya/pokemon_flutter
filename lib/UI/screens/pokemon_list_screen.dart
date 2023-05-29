@@ -73,40 +73,12 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
     );
   }
 
-  _buildHeader(Pokedex pokedex) {
-    return SliverToBoxAdapter(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(pokedex.name,
-                style: TextStyle(
-                    fontSize: 26, fontWeight: FontWeight.w600, height: 2)),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Semantics(
-              excludeSemantics: true,
-              child: Text(
-                pokedex.description,
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pokedex'),
+        title: Text('Pokemon'),
         actions: [_buildViewTypeSelector()],
       ),
       body: StreamBuilder<Pokedex>(
@@ -117,7 +89,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
             return CustomScrollView(
               semanticChildCount: snapshot.data!.pokemonEntries.length,
               slivers: [
-                _buildHeader(snapshot.data!),
+                
                 _viewType == _ViewType.GRID
                     ? _buildPokemonGrid(snapshot.data!.pokemonEntries)
                     : _buildPokemonList(snapshot.data!.pokemonEntries),
