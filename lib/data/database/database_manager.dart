@@ -4,6 +4,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sembast/sembast.dart';
 import 'package:sembast/sembast_io.dart';
 
+
 class DatabaseManager implements Bloc {
   final _dbPath = 'pokemon.db';
   DatabaseFactory dbFactory = databaseFactoryIo;

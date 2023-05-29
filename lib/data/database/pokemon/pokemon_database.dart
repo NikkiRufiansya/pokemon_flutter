@@ -1,4 +1,4 @@
-
+import 'package:sembast/sembast.dart';
 
 import '../database_manager.dart';
 import '../model/pokemon_db_extension.dart';
@@ -6,12 +6,12 @@ import '../model/pokemon_species_db_extension.dart';
 import 'i_pokemon_database.dart';
 import '../../../domain/models/pokemon.dart';
 import '../../../domain/models/pokemon_species.dart';
-import 'package:sembast/sembast.dart';
+
 
 class PokemonDatabaseImpl implements PokemonDatabase {
   final DatabaseManager db;
   final store = stringMapStoreFactory.store('pokemon');
-  final speciesStore = StoreRef('species');
+  final speciesStore = StoreRef<dynamic,dynamic>('species');
   final pokedexStore = StoreRef('pokedex');
 
   PokemonDatabaseImpl({required this.db});

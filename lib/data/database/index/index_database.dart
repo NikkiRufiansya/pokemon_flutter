@@ -2,6 +2,7 @@ import 'package:flutter_pokemon/data/database/database_manager.dart';
 import 'package:flutter_pokemon/domain/models/pokemon_entry.dart';
 import 'package:sembast/sembast.dart';
 
+
 class IndexDatabase {
   final DatabaseManager databaseManager;
 

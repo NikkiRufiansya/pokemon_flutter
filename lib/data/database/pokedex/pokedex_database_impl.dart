@@ -1,10 +1,12 @@
+import 'package:sembast/sembast.dart';
+
 import 'pokedex_database.dart';
 import '../../../domain/models/pokemon_entry.dart';
 
 import '../database_manager.dart';
 import '../../../domain/models/pokedex.dart';
 import '../../../utils/functions/base_parsing.dart';
-import 'package:sembast/sembast.dart';
+
 
 class PokedexDatabaseImpl implements PokedexDatabase {
   final DatabaseManager db;
