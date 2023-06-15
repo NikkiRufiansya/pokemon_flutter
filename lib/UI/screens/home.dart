@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_pokemon/UI/bloc/interface/i_index_bloc.dart';
 import 'pokemon_list_screen.dart';
@@ -23,6 +25,8 @@ class _PokemonHomePageState extends State<PokemonHomePage> {
     super.initState();
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,6 +40,7 @@ class _PokemonHomePageState extends State<PokemonHomePage> {
             return PokemonListScreen();
           }
           return SplashScreen();
+           
         },
       ),
     );

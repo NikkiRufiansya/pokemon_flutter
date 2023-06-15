@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class SplashScreen extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(30),
-        child: Image.asset('assets/pokemon-logo.png'),
+        child: Lottie.asset("assets/pokemon.json"),
       ),
     );
   }
